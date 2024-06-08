@@ -1,24 +1,53 @@
-import logo from './logo.svg';
-import './App.css';
+// App.js
+import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Navbar from "./components/Navbar/Navbar";
+import Login from "./pages/Login/Login";
+import Account from "./pages/Account/Home";
+import Checkout from "./pages/Checkout/Checkout";
+import { AuthContextProvider, UserAuth } from "./context/AuthContext";
+import { CartContextProvider } from "./context/CartContext";
+import Protected from "./components/Protected";
+import ProtectedCheckout from "./components/ProtectedCheckout";
+
+const AppContent = () => {
+  const { user } = UserAuth();
+
+  return (
+    <>
+      {user && <Navbar />}
+      <div className="container">
+        <Routes>
+          <Route path="/" element={<Login />} />
+          <Route
+            path="/checkout"
+            element={
+              <ProtectedCheckout>
+                <Checkout />
+              </ProtectedCheckout>
+            }
+          />
+          <Route
+            path="/account"
+            element={
+              <Protected>
+                <Account />
+              </Protected>
+            }
+          />
+        </Routes>
+      </div>
+    </>
+  );
+};
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <AuthContextProvider>
+      <CartContextProvider>
+        <AppContent />
+      </CartContextProvider>
+    </AuthContextProvider>
   );
 }
 

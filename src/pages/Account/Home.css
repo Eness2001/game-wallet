@@ -1,0 +1,159 @@
+.items-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+}
+
+.item-card {
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 16px;
+  width: 300px;
+  box-sizing: border-box;
+  text-align: center;
+  transition: transform 0.2s;
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.item-card img {
+  max-width: 100%; /* Resimlerin en fazla genişlikleri %100 olacak */
+  height: 250px; /* Resimlerin oranları korunacak */
+  display: block; /* Resimlerin altındaki boşlukları gidermek için */
+  margin: 0 auto 10px; /* Resimlerin alt kısmına 10px boşluk bırak */
+}
+
+.item-card h2 {
+  font-size: 1.25rem;
+  margin: 12px 0;
+}
+
+.item-card p {
+  margin: 8px 0;
+}
+
+.item-card button {
+  background-color: #4caf50; /* Yeşil */
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: block;
+  width: 100%;
+  font-size: 16px;
+  margin-top: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition-duration: 0.4s;
+}
+
+.item-card button:hover {
+  background-color: #45a049; /* Koyu yeşil */
+}
+
+.item-card:hover {
+  transform: translateY(-5px);
+}
+.accordion-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px; /* Buton ile kartlar arasında boşluk bırak */
+}
+
+.toggle-button {
+  background-color: #4caf50; /* Yeşil */
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: block;
+  width: fit-content; /* İçeriğe göre genişlik */
+  font-size: 16px;
+  margin-bottom: 10px; /* Butonlar arasında boşluk bırak */
+  border-radius: 5px;
+  cursor: pointer;
+  transition-duration: 0.4s;
+  margin-right: 15px;
+  margin-top: 10px;
+}
+
+.toggle-button:hover {
+  background-color: #45a049; /* Koyu yeşil */
+}
+.content {
+  display: flex;
+  margin-top: 20px;
+}
+.content button {
+  background-color: #4caf50; /* Yeşil */
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: block;
+  width: fit-content; /* İçeriğe göre genişlik */
+  font-size: 16px;
+  margin-bottom: 10px; /* Butonlar arasında boşluk bırak */
+  border-radius: 5px;
+  cursor: pointer;
+  transition-duration: 0.4s;
+  margin-right: 15px;
+}
+
+.content button:hover {
+  background-color: #45a049; /* Koyu yeşil */
+}
+
+.accordion-container {
+  position: relative;
+}
+
+.toggle-button {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.filter-anchor{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Küçük ekranlar için */
+@media (max-width: 767px) {
+  .content {
+    display: none;
+  }
+  .content.active {
+    display: block;
+  }
+}
+
+/* Büyük ekranlar için */
+@media (min-width: 768px) {
+  .toggle-button {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .item-card {
+    width: 45%;
+  }
+}
+
+@media (max-width: 480px) {
+  .item-card {
+    width: 100%;
+  }
+}

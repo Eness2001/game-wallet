@@ -1,0 +1,91 @@
+.navbar {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: rgb(229, 229, 236);
+  border-radius: 0px  0px 20px 20px;
+  padding: 10px;
+  border-bottom: 2px solid #ddd;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); 
+}
+.app-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.profile-left {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.pofile-right {
+  display: flex;
+  align-items: center;
+}
+
+.pofile-right img {
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  margin-right: 20px;
+}
+.logout-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(143, 136, 136);
+  border: 1px solid #ccc;
+  height: 40px;
+  width: 130px;
+  border-radius: 16px;
+  cursor: pointer;
+  border-bottom: 2px solid #ddd;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); 
+}
+
+.logout-btn:active {
+  background-color: red;
+}
+
+.logout-btn:hover {
+  background-color: white;
+}
+.logout-btn span {
+    margin-left: 10px;
+  margin-right: 20px;
+  color: rgb(0, 0, 0);
+
+  font-weight: 700;
+  font-size: 16px;
+}
+
+.google-account-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media only screen and (max-width: 600px) {
+  .logout-btn span {
+    display: none;
+  }
+
+  .logout-btn {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+  }
+
+  .navbar {
+    justify-content: space-between;
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+}
+
+.link-style{
+  text-decoration: none;
+  color: yellow;
+}

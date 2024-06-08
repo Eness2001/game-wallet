@@ -1,0 +1,7 @@
+{
+  "projects": {
+    "default": "game-wallet-fd4b9",
+    "dev" : "game-wallet-fd4b9",
+    "prod":"game-wallet-fd4b9F"
+  }
+}

@@ -1,0 +1,39 @@
+.login-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.login-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 500px;
+  align-items: center;
+  padding: 20px;
+  border: 2px solid #ccc;
+  border-radius: 15px;
+  max-width: 90%; /* Maksimum genişlik */
+  width: 400px; /* Sabit genişlik, istediğiniz değeri ayarlayabilirsiniz */
+}
+
+.login-bottom {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.login-bottom h1 {
+  margin-bottom: 20px;
+  color: white;
+}
+
+.login-logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
